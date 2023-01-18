@@ -39,6 +39,11 @@
             <id>cloudera</id>
             <url>https://repository.cloudera.com/artifactory/cloudera-repos/</url>
         </repository>
+
+        <repository>
+            <id>Ceylon</id>
+            <url>https://modules.ceylon-lang.org/maven/1/</url>
+        </repository>
     </repositories>
 
     <dependencies>
@@ -184,6 +189,26 @@
             <groupId>com.alibaba</groupId>
             <artifactId>fastjson</artifactId>
             <version>1.2.47</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/com.fasterxml.jackson/core -->
+        <dependency>
+            <groupId>com.fasterxml.jackson</groupId>
+            <artifactId>core</artifactId>
+            <version>2.7.4</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/com.fasterxml.jackson/databind -->
+        <dependency>
+            <groupId>com.fasterxml.jackson</groupId>
+            <artifactId>databind</artifactId>
+            <version>2.7.4</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-lang3 -->
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>3.12.0</version>
         </dependency>
     </dependencies>
 
