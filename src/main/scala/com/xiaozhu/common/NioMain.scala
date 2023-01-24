@@ -1,6 +1,7 @@
 package com.xiaozhu.common
 
-import java.io.{File, FileInputStream, FileOutputStream}
+import java.io.{File, FileInputStream, FileOutputStream, FileReader, IOException}
+import java.nio.charset.StandardCharsets
 
 object NioMain {
 
@@ -23,7 +24,28 @@ object NioMain {
     }
     // 字符流
     // Reader、Writer
+//    try (Reader reader = new FileReader("src/readme.txt", StandardCharsets.UTF_8) {
+//      // TODO
+//    };
 
+    var reader: FileReader = null
+    try{
+      reader = new FileReader("D:\\java-demo\\scala-basic\\data\\data.txt")
+
+      val buffer = new Array[Char](10)
+
+      var n = 0
+      while( n != -1) {
+        n = reader.read(buffer)
+        buffer.foreach(println)
+      }
+
+    } catch {
+      case e: IOException => println(e.getCause)
+      case _ => println("exception...")
+    } finally {
+      reader.close
+    }
   }
 
 
